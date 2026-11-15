@@ -31,6 +31,7 @@ def merge(left: list, right: list) -> list:
     result.extend(left or right)
     return result
 
+
 if __name__ == "__main__":
     while True:
         try:
