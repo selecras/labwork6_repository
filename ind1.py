@@ -31,17 +31,17 @@ def merge(left: list, right: list) -> list:
     result.extend(left or right)
     return result
 
+if __name__ == "__main__":
+    while True:
+        try:
+            N = int(input("Введите кол-во элементов: "))
+            if not (1 <= N <= 50):
+                raise ValueError
+            break
+        except ValueError:
+            print("Некорректный ввод")
 
-while True:
-    try:
-        N = int(input("Введите кол-во элементов: "))
-        if not (1 <= N <= 50):
-            raise ValueError
-        break
-    except ValueError:
-        print("Некорректный ввод")
-
-a = [randint(1, 100) for _ in range(N)]
-sorted_a = merge_sort(a)
-print(a)
-print(sorted_a)
+    a = [randint(1, 100) for _ in range(N)]
+    sorted_a = merge_sort(a)
+    print(a)
+    print(sorted_a)
